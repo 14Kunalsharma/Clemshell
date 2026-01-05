@@ -1,100 +1,93 @@
 body{
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    background-image: url("Frame 7.png");
-    background-size: cover;
-    background-position: center;
+    margin:0;
+    padding:0;
+    min-height:100vh;
+    background-image:url("Frame 7.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .login{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
-.logo{
-    padding-bottom: 47px;
+.logo img{
+    width:320px;
+    height:auto;
+    margin-bottom:47px;
 }
 
 .login-btn{
-    width: 140px;
-    height: 48px;
-    border-radius: 50px;
-    font-weight: 400;
-    font-size: 22px;
-    cursor: pointer;
-
+    width:140px;
+    height:48px;
+    border-radius:50px;
+    font-size:22px;
+    cursor:pointer;
     background:
         linear-gradient(white, white) padding-box,
-        linear-gradient(
-            90deg,
-            #8EAAFE,
-            #1CBFFA,
-            #F8E29F,
-            #FF538B
-        ) border-box;
-
-    border: 2px solid transparent;
-}
-
-.logo-2{
-    padding-bottom: 84px;
+        linear-gradient(90deg,#8EAAFE,#1CBFFA,#F8E29F,#FF538B) border-box;
+    border:2px solid transparent;
 }
 
 .input-field{
-    display: flex;
-    flex-direction: column;
-    width: 374px;
-    height: 111px;
-    margin-bottom: 88px;
+    width:374px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:88px;
+    align-items: end;
 }
 
-#user-id{
-    width: 374px;
-    height: 48px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 22px;
-    border-radius: 50px;
-    margin-bottom: 15px;
-    background:
-        linear-gradient(white, white) padding-box,
-        linear-gradient(
-            90deg,
-            #8EAAFE,
-            #1CBFFA,
-            #F8E29F,
-            #FF538B
-        ) border-box;
-
-    border: 2px solid transparent;
-}
-
+#user-id,
 #password{
-    width: 374px;
-    height: 48px;
-    text-align: center;
-    border-radius: 50px;
-    font-weight: 400;
-    font-size: 22px;
+    width:374px;
+    height:48px;
+    text-align:center;
+    font-size:22px;
+    border-radius:50px;
     background:
         linear-gradient(white, white) padding-box,
-        linear-gradient(
-            90deg,
-            #8EAAFE,
-            #1CBFFA,
-            #F8E29F,
-            #FF538B
-        ) border-box;
-
-    border: 2px solid transparent;
+        linear-gradient(90deg,#8EAAFE,#1CBFFA,#F8E29F,#FF538B) border-box;
+    border:2px solid transparent;
 }
 
 .submit{
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    display:flex;
+    justify-content:center;
+}
+
+@media (max-width:768px){
+    .logo img{
+        width:260px;
+    }
+
+    .input-field,
+    #user-id,
+    #password{
+        width:300px;
+    }
+}
+
+@media (max-width:480px){
+    .logo img{
+        width:220px;
+        margin-bottom:32px;
+    }
+
+    .input-field,
+    #user-id,
+    #password{
+        width:90%;
+        max-width:320px;
+    }
+
+    .login-btn{
+        width:130px;
+        font-size:20px;
+    }
 }
